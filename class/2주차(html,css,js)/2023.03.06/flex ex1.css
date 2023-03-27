@@ -1,0 +1,32 @@
+.container{
+    width: 500px;
+    height: 500px;
+    background-color: #333;
+    margin:0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+    
+}
+
+.items{
+    width: 100px;
+    height: 100px;
+}
+
+.item1{
+    background-color: red;
+}
+
+.item2{
+    background-color: yellow;
+}
+
+.item3{
+    background-color: green;
+}
+
+.item4{
+    background-color: blue;
+}

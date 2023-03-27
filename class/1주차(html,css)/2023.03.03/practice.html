@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*요소의 상황에 따른 가상선택자
+        1.E:first-child{} E가 첫번째 요소이면 선택
+        2.E:last-child{} E가 마지막 요소라면 선택
+        3.E:nth-child{} E가 n번째 요소라면 선택
+        4.E.not(XYZ) XYZ가 아닌 요소 E선택
+        5.E.nth-ofotype(n){}
+        */
+        .zoo>*{
+            background-color: green;
+            color: #fff;
+        }
+
+        /* 강아지 선택*/
+        .zoo>li:last-child{
+            background-color: black ;
+        }
+
+        .zoo>*:first-child{
+            background-color: red;
+        }
+
+        .zoo > *:not(div){
+            background-color: pink;
+        }
+
+        .zoo > li:nth-child(2n){
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <ul class="zoo">
+        <h1>동물원 입니다.</h1>
+        <div>원숭이</div>
+        <li>사자</li>
+        <li>토끼</li>
+        <li>호랑이</li>
+        <li>코끼리</li>
+        <div>코알라</div>
+        <li>강아지</li>
+    </ul>
+    
+</body>
+</html>

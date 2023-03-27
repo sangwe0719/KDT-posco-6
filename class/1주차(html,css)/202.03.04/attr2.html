@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./attr.css">
+
+    <title>Document</title>
+    <style>
+        .parant{
+            width: 500px;
+            height: 200px;
+            background-color: red;
+        }
+
+        .parant .min{
+            min-width: 400px;
+            background-color: orange;
+            height: 100px;
+        }
+
+        .parant .max{
+            max-width: 400px;
+            background-color: aqua;
+            height: 100px;
+        }
+
+        .box{
+            background-color: aliceblue;
+            border: 1px solid black;
+        }
+
+        .box-px{
+            width: 50px;
+            height: clac(50vw - 10px);
+        }
+
+        .box-view{
+            width: 10vw;
+            height: 10vw;
+        }
+
+        .box-per{
+            width: 10%;
+            height: 10%;
+        }
+
+        .rem {
+            font-size: 2rem;
+        }
+
+        .em {
+            font-size: 2em;
+        }
+
+        .square {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            cursor: pointer;
+            border: 1px solid gray;
+        }
+
+        .border {
+            border: 3px solid black;
+            border-color: blue;
+            border-color: red orange yellow green;
+            border-left: 5px dotted slateblue;
+            border-top-style: dashed;
+        }
+
+        .rounded {
+            background-color: thistle;
+            border-radius: 10px;
+            border-radius: 10px 40px;
+            border-radius: 10px 20px 40px;
+            border-radius: 5px 10x 20x 40px;
+            border-radius: 10%;
+            border-radius: 10px;
+            border-radius: 50%
+        }
+    </style>
+</head>
+<body>
+
+    <!--<h2>단위</h2>
+    <div class="box box-px"></div>
+    <div class="box box-view"></div>
+    <div class="box box-per"></div>
+    <div class="rem">rem
+      <div class="rem">rem
+        <div class="rem">rem</div>
+      </div>
+    </div>
+    <div class="em">em
+      <div class="em">em
+        <div class="em">em</div>
+      </div>
+    </div>
+-->
+
+    <hr />
+
+    <h2>border</h2>
+    <div class="square border"></div>
+    <div class="square rounded"></div>
+
+    <hr />
+
+    <h2>box-sizing</h2>
+   <div class="square box-sizing content-box">box1</div>
+   <div class="square box-sizing border-box">box2</div>
+
+   <hr />
+
+   <div class="square">original</div>
+  <div class="square d-none">d-none</div>
+  <div class="square invisible">invisible</div>
+  <div class="square opacity-0">opacity-0</div>
+  <div class="square">original</div>
+
+  <h2>overflow 속성</h2>
+  <div class="square overflow-hidden">
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur porro voluptas suscipit non nesciunt totam pariatur vel reiciendis illum rem tenetur ad repellendus facere, delectus recusandae eveniet? Repudiandae, eaque quas.</p>
+    <img src="./KDT 6 HTML/img/pooh.png" alt="푸">
+  </div>
+  <div class="square overflow-auto">
+    <p>Magnam omnis tempore accusantium aut, reiciendis iusto ipsum dolore laudantium deserunt, aliquam vel tenetur nisi, itaque distinctio fuga vitae veritatis illo enim. Corrupti ipsum minus qui placeat eius reprehenderit ullam?</p>
+    <img src="./img/pooh.png" alt="푸">
+  </div>
+  <div class="square overflow-scroll">
+    <p>Magni optio sed eligendi dolores nemo molestiae, aut, quaerat veritatis ad iusto doloremque deserunt minus molestias voluptatem repellat vero earum rerum saepe. Delectus ut ipsam, itaque autem aspernatur est corrupti?</p>
+    <img src="./img/pooh.png" alt="푸">
+  </div>
+  <div class="square overflow-visible">
+    <p>Possimus laudantium fugiat quia excepturi debitis blanditiis quae porro beatae est sapiente ab natus facilis labore, numquam ut itaque. Asperiores praesentium at expedita facilis cumque distinctio, fuga ratione dolor nesciunt.</p>
+    <img src="./img/pooh.png" alt="푸">
+  </div
+    
+</body>
+</html>

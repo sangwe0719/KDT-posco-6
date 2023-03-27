@@ -1,0 +1,29 @@
+.circle{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: absolute;
+    background-repeat:no-repeat;
+}
+
+.circle1 {
+    background: linear-gradient(225deg,yellow, rgb(238, 5, 192));
+    left: 150px;
+    top: 150px
+    }
+.circle2{
+    background-color:white;
+    width: 280px;
+    height: 280px;
+    left: 160px;
+    top: 160px;
+}
+
+.circle3 {
+    background-image:url('../../img/pooh.png');
+    width: 260px;
+    height: 260px;
+    left: 170px;
+    top: 170px;
+    background-size:contain;
+}

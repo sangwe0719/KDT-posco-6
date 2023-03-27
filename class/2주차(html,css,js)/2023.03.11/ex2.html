@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .box {
+        background-color: blueviolet;
+        color: white;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        justify-content: space-between;
+      }
+
+      .box > span {
+        font-size: 40px;
+        display: flex;
+        padding: 1rem;
+      }
+
+      .menu {
+        font-size: 20px;
+        display: flex;
+        padding: 1rem;
+      }
+
+      .menu2 {
+        padding: 1rem;
+        background-color: rgba(137, 43, 226, 0.327);
+        visibility: hidden;
+      }
+
+      .box > i {
+        visibility: hidden;
+      }
+
+      .menu > div {
+        padding: 1rem;
+      }
+
+      @media screen and (max-width: 992px) {
+        .menu {
+          display: none;
+        }
+
+        .menu2 {
+          visibility: visible;
+        }
+
+        .box > i {
+          visibility: visible;
+        }
+      }
+    </style>
+    <script
+      src="https://kit.fontawesome.com/95c6c2038b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="box">
+      <span>LOGO</span>
+      <i class="fa-solid fa-bars"></i>
+      <div class="menu">
+        <div>메뉴1</div>
+        <div>메뉴2</div>
+        <div>메뉴3</div>
+        <div>메뉴4</div>
+      </div>
+    </div>
+    <div class="menu2">
+      <div>메뉴1</div>
+      <div>메뉴2</div>
+      <div>메뉴3</div>
+      <div>메뉴4</div>
+    </div>
+  </body>
+</html>

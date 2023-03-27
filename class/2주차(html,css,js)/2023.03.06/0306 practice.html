@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        
+
+        img {
+        width: 400px;
+        height: 200px;
+        cursor: pointer;
+        position: absolute;
+        border: 1px solid black;
+        transform: skewY(30deg);
+        }
+
+        img:hover{
+            transform: perspective(500px) rotateY(0deg);
+            transition-duration: 1s;
+            transition-timing-function: ease;
+            backface-visibility: visible;
+        }
+
+        .box1{
+            top: 200px;
+            left: 200px;
+            position: relative;
+            z-index: 5;
+        }
+        
+        .box2{
+            top: 150px;
+            left: 400px;
+            position: relative;
+            z-index: 4
+        }
+
+        .box2:hover{
+            z-index: 7;
+        }
+
+        .box3{
+            top: 100px;
+            left: 600px;
+            position: absolute;
+        }
+
+        .box3:hover{
+            z-index: 7;
+        }
+
+    </style>
+</head>
+<body>
+    <div class ="img-box">
+        <div class = "box1" >
+            <img src="../../img/beach1.jpg">
+        </div>
+        <div class = "box2" >
+            <img src="../../img/beach2.jpg">
+        </div>
+        <div class = "box3" >
+            <img src="../../img/beach3.jpg">
+        </div>
+    </div>
+
+    
+</body>
+</html>

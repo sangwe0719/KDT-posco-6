@@ -1,0 +1,65 @@
+.container{
+    width: 500px;
+    height: 500px;
+    background-color: blue;
+    position: relative;
+}
+.container > div{
+    background-color: skyblue;
+    height: 100px;
+    width: 100px;
+}
+.container.Item1{
+    position: relative;
+    left: 50px;
+    top: 30px;
+}
+
+.container.Item2{
+    position: absolute;
+    right: 30px;
+    bottom: 100px;
+}
+
+.Item3{
+    position: fixed;
+    right: 100px;
+    top: 100px
+}
+
+.parent {
+    position: relative;
+    }
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    }
+.circle1 {
+    background-color: #9afaff;
+    top: 0;
+    left: 200px;
+    }
+.circle2 {
+    background-color: #84ff8d;
+    top: 0;
+    left: 150px;
+    }
+.circle3 {
+    background-color: #ffeb88;
+    top: 0;
+    left: 100px;
+    z-index: 5;
+    }
+.circle4 {
+    background-color: #ffb680;
+    top: 0;
+    left: 50px;
+    z-index: 3;
+    }
+.circle5 {
+    top: 0;
+    left: 0;
+    background-color: #ff7c7c;
+    }

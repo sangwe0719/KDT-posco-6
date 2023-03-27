@@ -1,0 +1,10 @@
+@import url("./import.css");
+
+span{
+    background-color: orange;
+    color: blue;
+}
+p{
+    background-color: red;
+    color:white;
+}

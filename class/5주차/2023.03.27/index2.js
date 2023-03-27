@@ -147,29 +147,31 @@ function sub(n){
     setTimeout(function(){
         let result = n - 1;
     // resolve (result);
-    reject(new Error('의도적으로 에러처리를 해봤음!'))
+    reject(new Error('의도적으로 에러처리를 해봤음!'));
     }, 500);
-    })  
+    });  
 }
 
 
 // promise 체이닝 사용해서 
 // add ->mul -> sub 순으로 실행
+//=> resolve(3 + 4) => resolve(7) => then(7)
 add(4, 3) //=> resolve(3 + 4) => resolve(7) => then(7)
-add(4,3).then(function(result){ 
-    // result = 7   
-    console.log('1: ', result);
+  .then(function (result) {
+    // result = 7
+    console.log('1: ', result); // 7
     return mul(result); // mul(7) => resolve(14) => then(14)
-})
-.then(function (result) { // result = 14
-        console.log('2: ', result); // 14
-        return sub(result); // sub(14) => resolve(13) => then(13)
-      })
-.then(function (result) { // result = 13
-        console.log('3: ', result); // 13
-      });
-      .catch(function (error) {
-        console.log('실패!');
-        console.log(error);
-      });
-      
+  })
+  .then(function (result) {
+    // result = 14
+    console.log('2: ', result); // 14
+    return sub(result); // sub(14) => resolve(13) => then(13)
+  })
+  .then(function (result) {
+    // result = 13
+    console.log('3: ', result); // 13
+  })
+  .catch(function (error) {
+    console.log('실패!');
+    console.log(error);
+  });

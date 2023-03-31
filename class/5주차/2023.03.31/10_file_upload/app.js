@@ -32,6 +32,7 @@ app.post('/upload' , upload.single('userfile'), (req, res) =>{
     //     filename: 'f3cf085cdd29940b8e8aa152041287cc', // destination에 저장된 파일명
     //     path: 'uploads\\f3cf085cdd29940b8e8aa152041287cc',// 업로드된 파일의 전체 경로
     //     size: 4533 // 파일 크기(byte)
+   
     //   }
       
     console.log(req.body); // 폼에 입력한 정보

@@ -19,6 +19,7 @@ app.get('/',(req,res)=>{
     res.render('index');
 });
 
+
 // single(): 하나의 파일 업로드할 때
 // single()의 매개변수: input 의 name과 일치시키기!
 app.post('/upload' , upload.single('userfile'), (req, res) =>{

@@ -61,13 +61,13 @@
     </fieldset>
     </br>
     <button type="button" onclick="axiosGet();">회원가입</button>
-    
+    </form>
     <div class="result"></div>
     <hr>
     
     <h2>실습2. axios post 로그인</h2>
-
-    <label for="username">아이디</label>
+    <form name = 'login2'>
+        <label for="username">아이디</label>
         <input type="text" id="id" name="id" />
         <label for="password">비밀번호</label>
         <input type="password" id="pw" name="pw" />
@@ -89,6 +89,11 @@
                 name: form.name.value,
             };
 
+            if(form.name.checkValidity() === false){
+                resultBox.textContent = '이름은 필수입니다!';
+                return;
+            }
+
             try {
                 const response = await axios({
                 url: 'axios',
@@ -106,13 +111,13 @@
             }
         } 
          
-        async function clickRegister() {
-      console.log('click register btn!')
+    //     async function clickRegister() {
+    //   console.log('click register btn!')
 
-      const form = document.forms['register']
-      const formInfo = {
-        username: form.username.value,
-      }
+    //   const form = document.forms['register']
+    //   const formInfo = {
+    //     username: form.username.value,
+    //   }
 
       // sol1) promise then() 
       // axios({
@@ -127,28 +132,37 @@
       // })
 
       // sol2) async/await 
-      const response = await axios({
-        url: '/practice1',
-        method: 'GET',
-        params: formInfo
-      })
-      console.log(response)
-      console.log(response.data) // { username: 'xxx'}
-      registerResult.textContent = `${response.data.username}님 환영합니다! 가입이 완료되었습니다`
-      registerResult.classList.add('success')
-    }
+    //   const response = await axios({
+    //     url: '/practice1',
+    //     method: 'GET',
+    //     params: formInfo
+    //   })
+    //   console.log(response)
+    //   console.log(response.data) // { username: 'xxx'}
+    //   registerResult.textContent = `${response.data.username}님 환영합니다! 가입이 완료되었습니다`
+    //   registerResult.classList.add('success')
+    // }
 
-    function clickLogin() {
+    function axiosPost() {
       console.log('click login btn!')
 
-      const form = document.forms['login'];
+      const form = document.forms['login2'];
       const formInfo = {
-        userId: form.userId.value,
-        userPw: form.userPw.value
+        id: form.id.value,
+        pw: form.pw.value,
+      };
+
+      // form validation
+      console.log(form.id.checkValidity());
+      console.log(form.pw.checkValidity());
+
+      if(form.id.checkValidity() === false || form.pw.checkValidity() === false){
+        loginResult.textContent = '아이디와 비밀번호는 필수 값입니다.😣';
+        return;
       }
 
       axios({
-        url: '/practice2',
+        url: 'axios',
         method: 'POST',
         data: formInfo
       }).then(function(response) {
@@ -159,7 +173,7 @@
           // 로그인 성공
           // response.data => {isLogin: true, userInfo: {…}}
           // => id님 로그인 성공 메세지
-          loginResult.textContent = `${response.data.userInfo.userId}님 로그인 성공!!`
+          loginResult.textContent = `${response.data.userInfo.id}님 로그인 성공!!`
           loginResult.classList.remove('error')
           loginResult.classList.add('success')
         } else {

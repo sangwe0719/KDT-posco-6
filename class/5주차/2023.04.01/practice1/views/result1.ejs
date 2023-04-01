@@ -9,7 +9,9 @@
         body{
             background-color: lightcoral;
             display: flex;
+            /*교차축:세로*/
             align-items: center;
+            /* 가로 */
             justify-content: center;
             height: 100vh;
         }
@@ -31,6 +33,7 @@
 
         ul {
             list-style: none;
+            padding-left: 0;
         }
         
         
@@ -38,7 +41,7 @@
 </head>
 <body>
     <div class = 'container'>
-        <img src = "/uploads/<%=userfile %>" alt="profile" class="profile_img">
+        <img src = "<%=userfile %>" alt="profile" class="profile_img">
         <h3><%= username%> 님! 환영합니다!</h3>
         <ul>
             <li>아이디:<%= userid %></li>

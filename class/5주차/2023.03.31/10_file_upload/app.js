@@ -74,7 +74,15 @@ app.post('/upload/fields',uploadDetail.fields([{name:'userfile1'},{name: 'userfi
     console.log(req.files);
     console.log(req.body);
     res.send('각각 여러 파일 업로드 완료~!');
-})
+});
+
+app.post(
+    '/dynamicFile',
+    uploadDetail.single('dynamic-userfile'), (req,res) =>{
+        console.log(req.file); // 요청의 파일 정보 확인
+        res.send(req.file); // 클라이언트에게 파일을 응답
+    }
+);
 
 app.listen(PORT,()=>{
     console.log(`http://localhost:${PORT}`);

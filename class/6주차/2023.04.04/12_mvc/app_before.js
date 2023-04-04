@@ -50,7 +50,12 @@ app.get('/comments', (req, res) => {
   res.render('comments', { commentInfos: comments });
 });
 
-// GET /comment/:id
+// GET /comment
+// /comment?id=6&name=홍길동
+// req.query  { id: 6, name: "홍길동"}  //req.query.id => 6
+// GET /comment/:id/:name
+// /comment/6/홍길동
+// req.params { id: 6, name:"홍길동"}
 app.get('/comment/:id', (req, res) => {
   console.log(req.params); // 라우트 매개변수에 대한 정보 담겨 있음
   console.log(req.params.id); // id 고유 값

@@ -15,9 +15,9 @@ app.use("/", indexRouter);
 // /routes/index.js 이 파일을 읽어보면 된다.
 
 app.get('*', (req, res) => {
-    // res.send('404 Error! 잘못된 주소 형식입니다.');
-    res.render('404');
-  });
+  // res.send('404 Error! 잘못된 주소 형식입니다.');
+  res.render('404');
+});
 
 app.listen(PORT, () => {
     console.log(`http://localhost:${PORT}`);

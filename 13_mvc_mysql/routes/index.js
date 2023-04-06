@@ -6,9 +6,12 @@ const router = express.Router();
 router.get('/', controller.main);
 
 // GET /visitor => localhost:PORT/visitor
-router.get('/visitor', controller.getVisitors);//전체 조회
+router.get('/visitor', controller.getVisitors); //전체 조회
 
 // POST /visitor/write
-router.post('/visitor/write', controller.postVisitor);//하나 추가
+router.post('/visitor/write', controller.postVisitor); //하나 추가
+
+// delete / visitor/delete
+router.delete('/visitor/delete', controller.deleteVisitor); // 하나 삭제
 
 module.exports = router;

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/login.css">
+    <!---- axios cdn---->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="container_box">
+        <h1>로그인</h1>
+        <p class="explain">아이디는 <b>banana</b>이고 비밀번호는 <b>1234</b>입니다.</p>
+        <form name="login">
+            <input type="text" id="id" name="userid" placeholder="ID">
+            <br>
+            <input type="password" id="pw" name="userpw" placeholder="PW">
+        </form>
+        <button type="button" class="login_btn" style="cursor: pointer;" onclick="loginbutton()">LOGIN</button>
+        <br>
+        <br>
+        <a href="/">홈화면으로 돌아가기</a>
+    </div>
+    <script>
+        function loginbutton() {
+          const form = document.forms["login"];
+          const formInfo = { 
+            userid: form.userid.value,
+            userpw: form.userpw.value };
+            console.log(formInfo);
+          
+            axios({
+            url: "/loginData",
+            method: "POST",
+            data: formInfo,
+          }).then((response) => {
+            //console.log(response.data);
+            if (response.data == true) {
+                window.location.href= '/';
+            } else {
+              alert(`아이디 또는 패스워드 오류!!`);
+            }
+          });
+        }
+      </script>
+</body>
+</html>

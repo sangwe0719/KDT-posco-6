@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: rgba(255, 127, 80, 0.401);
+}
+
+
+.title {
+    display: flex;
+    flex-direction: left;
+}
+
+.chat-list {
+    position: relative;
+    background-color: #d7e4f2;
+    width: 500px;
+    height: 500px;
+    padding: 10px;
+    border-radius: 14px 14px 14px 14px;
+}
+
+.my-chat {
+    margin: 5px 0;
+    max-width: 300px;
+    font-size: 14px;
+    position:relative;
+    background-color: #fff46d;
+    border-radius: 14px 14px 0px 14px;
+    padding: 7px 15px 7px 15px;
+    clear: both;
+    float: right;
+    list-style: none;
+}
+
+.other-chat {
+    margin: 5px 0;
+    max-width: 300px;
+    font-size: 14px;
+    position:relative;
+    background-color: white;
+    border-radius: 14px 14px 14px 0px;
+    padding: 7px 15px 7px 15px;
+    float: left;
+    clear: both;
+    
+}
+
+/* [실습 3] */
+
+.notice {
+    text-align: center;
+    color: #005397;
+    font-size: 12px;
+    position: relative;
+}
+
+.d-none {
+    display: none;
+}

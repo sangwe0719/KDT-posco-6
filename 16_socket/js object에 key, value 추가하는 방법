@@ -1,0 +1,10 @@
+// js object에 key, value 추가하는 방법
+const nickObj = {};
+
+const socket = { id: 'asfadqdqwdq12331'};
+
+nickObj.hello = '안녕'; // 방법1
+nickObj['apple'] = '사과'; // 방법2 
+nickObj[socket.id] = 'sean'
+
+console.log(nickObj)

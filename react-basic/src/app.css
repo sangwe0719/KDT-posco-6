@@ -1,0 +1,47 @@
+.test {
+    background-color: orange;
+    color: black;
+}
+
+.red {
+    background-color: red;
+    width: 80px;
+    height: 100px;
+}
+
+.orange {
+    background-color: orange;
+    width: 80px;
+    height: 130px;
+}
+
+.yellow {
+    background-color: yellow;
+    width: 80px;
+    height: 160px;
+}
+
+.green {
+    background-color: green;
+    width: 80px;
+    height: 190px;
+}
+
+.blue {
+    background-color: blue;
+    width: 80px;
+    height: 220px;
+}
+
+.navy {
+    background-color: navy;
+    width: 80px;
+    height: 250px;
+}
+
+.purple {
+    background-color: purple;
+    width: 80px;
+    height: 280px;
+}
+

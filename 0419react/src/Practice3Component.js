@@ -1,26 +1,18 @@
 import { useState } from "react";
 
 function Practice3Component() {
-    const [text, setText] = useState(''); // -> 안녕하세요
-    const [isVisible, setIsVisible] = useState(false); // -> true
+    const [visible, setvisible] = useState(true); // -> true
 
-    const [display,setdisplay] = useState("block");
-    // const [text,settext] = useState("");
-    const disapear = () => {
-        if( display == "block" ){
-            setdisplay("none");
-            setIsVisible("보여라")
+    const toggle = () => {
+       setvisible(!visible);
+       // !true => false
+       // !false => true
+    };
 
-        } else {
-            setText("안녕하세요");
-            setdisplay("block")
-            setIsVisible("사라져라")
-        }
-    }
     return(
         <div>
-            <button onClick={disapear}>{isVisible}</button>
-            <h3 style={{display : display}}>{text}</h3>
+            <button onClick={toggle}>{visible ? '사라져라':'보여라'}</button>
+            <h3>{visible && '안녕하세요'}</h3>
         </div>
     )
 }

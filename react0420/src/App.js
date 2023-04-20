@@ -1,12 +1,9 @@
-import './App.css';
-import SyntheticEvent from './SyntheticEvent';
+import Example from "./Example";
 
 function App() {
-  return (
-    <div className="App">
-      <SyntheticEvent/>  
-    </div>
-  );
+  return <>
+      <Example/>
+    </>
 }
 
 export default App;

@@ -1,0 +1,12 @@
+input:focus {
+    border-color: red;
+    box-shadow: 0 0 8px red;
+    outline: none !important;
+}
+
+input.isExist {
+    border-color: blue;
+    box-shadow: 0 0 8px blue;
+    outline: none !important;
+
+}

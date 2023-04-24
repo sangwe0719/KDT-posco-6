@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 
 const fakePosts = [
@@ -66,20 +67,27 @@ const PostList = () => {
 
   console.log(posts);
 
+  const dataloading = () => {
+    return <h3>Loading.....</h3>;
+  }
+
+  const dataloaded = () => {
+    
+    return posts.map((obj) => (
+            <div className="PostItem">
+            <div key={obj.id}>
+                <span className="id">{obj.id}</span>
+                <span className="title">{obj.title}</span>
+            </div >
+            <p className="body">{obj.body}</p>
+            </div>
+    )) 
+  }
+
   return (
     <div className="PostList">
       <header>📨 Post List</header>
-        {posts.length === 0 ? <h3>Loading.....</h3> :  
-        posts.map((obj) => (
-        <div className="PostItem">
-          <div key={obj.id}>
-            <span className="id">{obj.id}</span>
-            <span className="title">{obj.title}</span>
-          </div >
-          <p className="body">{obj.body}</p>
-        </div> 
-      ))
-        }
+        {posts.length === 0 ? dataloading() :  dataloaded() }
     </div>
   );
 };

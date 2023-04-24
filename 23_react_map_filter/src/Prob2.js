@@ -20,7 +20,7 @@ const Prob2 = () => {
     },
   ]); // 댓글 목록 배열 state
 
-  const[inputComment,setInputComment] = useState('');
+  
 
   const addComment = () => {
 

@@ -1,0 +1,44 @@
+@import './_prob.scss';
+@import '~include-media/dist/include-media';
+
+@mixin circle($name,$row,$column) {
+    @keyframes #{$name} {
+        0% {transform: translate(0,0);}
+
+        25% {transform: translate(0,$row);}
+
+        50% {transform: translate($column,$row);}
+
+        75% {transform: translate($column, 0);}
+
+        100% {transform: translate(0,0);}
+    }
+}
+
+.Prob2 {
+    .circle {
+        width: 70px;
+        height: 70px;
+        position: relative;
+        border-radius: 50%;
+
+        @include circle(circle1,100px,100px);
+        @include circle(circle2,200px,200px);
+        @include circle(circle3,300px,300px);
+
+        &.circle1 {
+            background-color: $color-red;
+            animation: circle1 2s ease infinite;
+        }
+
+        &.circle2{
+            background-color: $color-yellow;
+            animation: circle2 2s ease infinite;
+        }
+
+        &.circle3 {
+            background-color: $color-green;
+            animation: circle3 2s ease infinite;
+        }
+    }
+}

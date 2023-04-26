@@ -1,0 +1,65 @@
+@import './_prob.scss';
+
+.Prob1 {
+    .body {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: absolute;
+        
+        &.body1 {
+            top: 100px;
+            left: 100px;
+            background-color: $color-red;
+        }
+    
+        &.body2 {
+            top: 150px;
+            left:160px;
+            background-color: $color-orange;
+        }
+    
+        &.body3 {
+            top: 190px;
+            left: 200px;
+            background-color: $color-yellow;
+        }
+    
+        &.body4 {
+            top: 240px;
+            left: 220px;
+            background-color:$color-green;
+        }
+    
+        &.body5 {
+            top:280px;
+            left: 280px;
+            background-color: $color-blue;
+        }
+    }
+    
+    .eye {
+        border-radius: 50%;
+        position: absolute;
+    
+        &.eye-black{
+            width: 20px;
+            height: 20px;
+            background-color: $color-black;
+            position: relative;
+            top:10px;
+        }
+    
+        &.eye-white{
+            width: 40px;
+            height: 40px;
+            background-color: $color-white;
+            position: relative;
+            left: 20px;
+            top:20px;
+        }
+    }
+    
+}
+
+

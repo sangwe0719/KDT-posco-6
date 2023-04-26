@@ -34,7 +34,7 @@ const useReducerTest = () => {
     return (
         <>
             <h1>useReducer hook</h1>
-            <h2>{number.value}</h2>
+            <h2>{number.value}</h2>,
 
             <button onClick={increment}>Plus</button>
             <button onClick={decrement}>Minus</button>

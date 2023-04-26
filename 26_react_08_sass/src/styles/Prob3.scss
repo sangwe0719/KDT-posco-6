@@ -1,0 +1,70 @@
+@import '~include-media/dist/include-media';
+
+$first_media : 768px;
+$second_media : 532px;
+
+// ver1 flex
+// .Prob3 {
+//     display: flex;
+
+//     div {
+//       width: 20%;
+
+//       .img {
+//         width: 100%;
+//         aspect-ratio: 1/1; //종횡비
+//         object-fit: cover;
+//       }
+//     }
+
+
+// }
+
+// @include media ('<#{$first_media}') {
+//   .Prob4 {
+//     flex-wrap: wrap;
+
+//     pictures{
+//       width: 33.3%;
+//     }
+//   }
+// }
+
+// @include media ('<#{$second_media}') {
+//   .Prob3 {
+//     pictures {
+//       width: 100%;
+//     }
+//   }
+// }
+
+//ver2 grid
+
+.Prob3 {
+  display: grid;
+  // grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+  grid-template-columns: repeat(5, 1fr);
+
+  div {
+    width: 100%;
+
+    img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+    }
+  }
+}
+
+@include media ('<#{$first_media}') {
+  .Prob3{  
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@include media ('<#{$second_media}') {
+  .Prob3 {
+    // grid-template-columns: repeat(1, 1fr);
+    display: block;
+  }
+}

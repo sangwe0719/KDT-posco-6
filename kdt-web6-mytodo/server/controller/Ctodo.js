@@ -11,15 +11,11 @@ const todo = function (Sequelize, DataTypes) {
           primaryKey: true,
           autoIncrement: true,
         },
-        userid: {
+        title: {
           type: DataTypes.STRING(20),
           allowNull: false,
         },
-        name: {
-          type: DataTypes.STRING(20),
-          allowNull: false,
-        },
-        pw: {
+        done: {
           type: DataTypes.STRING(20),
           allowNull: false,
         },

@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.PracticeHeader {
+    background-color: beige;
+    height: 100px;
+    font-size: 20px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+
+    ul{
+        list-style: none;
+        display: flex;
+
+        .menu-items{
+        font-size: 15px;
+        margin: 0 8px;
+        display: flex;
+        list-style: none;
+    }
+    }
+}
+
+.Student {
+    background-color: beige;
+    height: 100px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+
+    .sean{
+        color: green;
+        font-weight: bold;
+    }
+
+    .jisu{
+        color:red;
+        font-weight: bold;
+    }
+}
+
+.image {
+    width: 300px;
+    height: 300px;
+}

@@ -20,7 +20,11 @@
 .MainPage {
     background-color: rgba(255, 0, 0, 0.195);
     min-height: 100vh;
+    &.Dark{
+            background-color: #333;
+    }
 }
+
 
 .ProductDetailPage {
     background-color: coral;
@@ -35,4 +39,15 @@
 .NotFound {
     background-color: yellowgreen;
     min-height: 100vh;
+}
+
+.ProductItem {
+        list-style: none;
+        background-color: rgb(177, 211, 241);
+        width: 80vw;
+        margin: 30px auto 0 auto;
+        
+        &:hover {
+            font-weight: 700;
+        }
 }

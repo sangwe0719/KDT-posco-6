@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Header {
+    background-color: beige;
+    height: 100px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .menu-item{
+        margin: 0 8px;
+    }
+}
+
+.MainPage {
+    background-color: rgba(255, 0, 0, 0.195);
+    min-height: 100vh;
+}
+
+.ProductDetailPage {
+    background-color: coral;
+    min-height: 100vh;
+}
+
+.ProductPage {
+    background-color: cadetblue;
+    min-height: 100vh;
+}
+
+.NotFound {
+    background-color: yellowgreen;
+    min-height: 100vh;
+}

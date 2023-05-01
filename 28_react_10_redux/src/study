@@ -1,0 +1,5 @@
+const DEFAULT_NUMBER = 0;
+const increase = (num = DEFAULT_NUMBER) => num + 1
+
+console.log(increase(100)) // 101
+console.log(increase()) // 1
